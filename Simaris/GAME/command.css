@@ -1,0 +1,119 @@
+.commander-panel {
+
+    margin-top: 35px;
+
+    padding: 28px;
+
+    background: rgba(7, 13, 16, .88);
+
+    border: 1px solid rgba(0, 255, 170, .18);
+
+    border-radius: 12px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 255, 170, .03),
+        0 0 18px rgba(0, 255, 170, .05);
+}
+
+.commander-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #00FFAA;
+
+    box-shadow: 0 0 10px #00FFAA;
+
+}
+
+.commander-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+
+}
+
+.commander-name {
+
+    color: #00FFAA;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.connection {
+
+    padding: 5px 12px;
+
+    border: 1px solid #00FFAA;
+
+    border-radius: 50px;
+
+    color: #00FFAA;
+
+    font-size: .75rem;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    background: rgba(0, 255, 170, .08);
+}
+
+.commander-message {
+
+    margin: 0;
+
+    color: #E7F7F1;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+
+    letter-spacing: .5px;
+}
+
+.commander-message strong {
+
+    color: #00FFAA;
+
+}
+
+.commander-panel::after {
+
+    content: "ENCRYPTED";
+
+    position: absolute;
+
+    top: 14px;
+
+    right: 18px;
+
+    font-size: .65rem;
+
+    letter-spacing: 2px;
+
+    color: rgba(0, 255, 170, .22);
+
+}

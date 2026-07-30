@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>K-999</title>
+
+    <!-- Fonte -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="import.css">
+</head>
+
+<body>
+
+    <div class="background-grid"></div>
+
+    <div class="scan-line"></div>
+
+    <main class="terminal">
+
+        <header class="header">
+
+            <h1 class="logo">
+                Key-999
+            </h1>
+
+            <p class="subtitle">
+                Terminal Militar de Inteligência Segura
+            </p>
+
+        </header>
+
+        <section class="dashboard">
+
+            <!-- Dados Interceptados -->
+
+            <article class="intel-panel">
+
+                <h2>
+                    DADOS INTERCEPTADOS
+                </h2>
+
+                <div class="intel-list">
+
+                    <div class="intel-item">
+                        <span>ID do Agente</span>
+                        <strong id="agentId">--</strong>
+                    </div>
+
+                    <div class="intel-item">
+                        <span>Chave de Criptografia</span>
+                        <strong id="encryptionKey">--</strong>
+                    </div>
+
+                    <div class="intel-item">
+                        <span>Servidor Alvo</span>
+                        <strong id="targetServer">BR-07</strong>
+                    </div>
+
+                    <div class="intel-item">
+                        <span>Nível de Ameaça</span>
+                        <strong id="threatLevel">ALTO</strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+            <!-- Status da Missão -->
+
+            <article class="status-panel">
+
+                <h2>
+                    STATUS DA MISSÃO
+                </h2>
+
+                <div class="status-list">
+
+                    <div class="status-item">
+                        <span>Tentativas</span>
+                        <strong>
+                            <span id="attempts">0</span> / 10
+                        </strong>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Status</span>
+                        <strong id="missionStatus">
+                            ATIVA
+                        </strong>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Dificuldade</span>
+                        <strong id="difficulty">
+                            FÁCIL
+                        </strong>
+                    </div>
+
+                    <div class="status-item">
+                        <span>Missão</span>
+                        <strong id="missionNumber">
+                            #01
+                        </strong>
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="terminal-panel">
+
+            <h2>
+                TERMINAL DE COMANDO
+            </h2>
+
+            <div class="terminal-input">
+
+                <span class="prompt">
+                    COMANDO&gt;
+                </span>
+
+                <span id="typedText"></span>
+
+                <span id="cursor" class="cursor"></span>
+
+                <input type="text" id="guess" inputmode="numeric" autocomplete="off" maxlength="3" aria-label="Digite
+                sua resposta">
+
+            </div>
+
+            <div class="terminal-buttons">
+
+                <button id="btnGuess" type="button">
+
+                    EXECUTAR
+
+                </button>
+
+                <button id="restart" type="button">
+
+                    NOVA OPERAÇÃO
+
+                </button>
+
+            </div>
+
+            <!-- Registro do Terminal -->
+
+            <div id="message" class="terminal-log">
+
+                Aguardando comando...
+
+            </div>
+
+        </section>
+
+        <section class="commander-panel">
+
+            <div class="commander-header">
+
+                <span class="commander-name">
+                    COMANDANTE
+                </span>
+
+                <span class="connection">
+                    CANAL SEGURO
+                </span>
+
+            </div>
+
+            <p id="commanderText" class="commander-message">
+
+                Hck-07,
+                analise os dados interceptados e execute o comando correto.
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

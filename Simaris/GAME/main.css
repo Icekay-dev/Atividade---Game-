@@ -1,0 +1,163 @@
+.dashboard {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+    gap: 30px;
+
+    margin: 40px 0;
+}
+
+.intel-panel,
+.status-panel {
+
+    position: relative;
+
+    background: rgba(7, 15, 18, .85);
+
+    border: 1px solid rgba(0, 255, 170, .18);
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    overflow: hidden;
+
+    transition: .3s;
+
+    box-shadow:
+        inset 0 0 20px rgba(0, 255, 170, .03),
+        0 0 20px rgba(0, 255, 170, .06);
+}
+
+.intel-panel:hover,
+.status-panel:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #00FFAA;
+
+    box-shadow:
+        0 0 18px rgba(0, 255, 170, .18),
+        inset 0 0 20px rgba(0, 255, 170, .08);
+
+}
+
+.intel-panel::before,
+.status-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+
+    background: #00FFAA;
+
+    box-shadow: 0 0 12px #00FFAA;
+}
+
+.intel-panel h2,
+.status-panel h2 {
+
+    margin-bottom: 22px;
+
+    font-size: 1rem;
+
+    letter-spacing: 3px;
+
+    color: #00FFAA;
+
+    text-transform: uppercase;
+}
+
+.intel-list,
+.status-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.intel-item,
+.status-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 14px 16px;
+
+    border-left: 3px solid #00FFAA;
+
+    background: rgba(255, 255, 255, .02);
+
+    transition: .25s;
+}
+
+.intel-item:hover,
+.status-item:hover {
+
+    background: rgba(0, 255, 170, .06);
+
+    transform: translateX(6px);
+
+}
+
+.intel-item span,
+.status-item span {
+
+    color: #9AA5A8;
+
+    font-size: .9rem;
+}
+
+.intel-item strong,
+.status-item strong {
+
+    color: #00FFAA;
+
+    font-size: 1rem;
+
+    letter-spacing: 1px;
+}
+
+.intel-panel::after {
+
+    content: "INT-SEC";
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    color: rgba(0, 255, 170, .25);
+
+    font-size: .65rem;
+
+    letter-spacing: 2px;
+}
+
+.status-panel::after {
+
+    content: "SYS-999";
+
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    color: rgba(0, 255, 170, .25);
+
+    font-size: .65rem;
+
+    letter-spacing: 2px;
+}

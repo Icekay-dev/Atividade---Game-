@@ -1,0 +1,256 @@
+/* ==========================================
+   SCANLINES
+========================================== */
+
+.background{
+
+    position:absolute;
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+    repeating-linear-gradient(
+
+        to bottom,
+
+        rgba(255,255,255,.025) 0px,
+
+        rgba(255,255,255,.025) 2px,
+
+        transparent 2px,
+
+        transparent 4px
+
+    );
+
+    opacity:.18;
+
+    animation:scanlines .12s linear infinite;
+
+}
+@keyframes scanlines{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(4px);
+
+    }
+
+}
+
+.content::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        transparent 15%,
+
+        rgba(255,255,255,.05) 35%,
+
+        transparent 60%
+
+    );
+
+}
+
+h1{
+
+    text-shadow:
+
+    0 0 8px rgba(183,255,122,.7),
+
+    0 0 25px rgba(183,255,122,.35),
+
+    0 0 60px rgba(183,255,122,.12);
+
+}
+
+.lore{
+
+    text-shadow:
+
+    0 0 4px rgba(183,255,122,.2);
+
+}
+
+button{
+
+    box-shadow:
+
+    0 0 12px rgba(183,255,122,.15);
+
+}
+
+button:hover{
+
+    box-shadow:
+
+    0 0 20px rgba(183,255,122,.35),
+
+    0 0 45px rgba(183,255,122,.15);
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        transparent 45%,
+
+        rgba(0,0,0,.15) 65%,
+
+        rgba(0,0,0,.92) 100%
+
+    );
+
+}
+
+.content{
+
+    animation:
+
+    flicker 8s infinite;
+
+}
+
+@keyframes flicker{
+
+    0%{
+
+        opacity:1;
+
+    }
+
+    2%{
+
+        opacity:.96;
+
+    }
+
+    3%{
+
+        opacity:1;
+
+    }
+
+    35%{
+
+        opacity:.985;
+
+    }
+
+    36%{
+
+        opacity:1;
+
+    }
+
+    70%{
+
+        opacity:.98;
+
+    }
+
+    71%{
+
+        opacity:1;
+
+    }
+
+}
+
+button::after{
+
+    content:"_";
+
+    margin-left:8px;
+
+    animation:cursor .9s infinite;
+
+}
+
+@keyframes cursor{
+
+    50%{
+
+        opacity:0;
+
+    }
+
+}
+
+.content::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    inset 0 0 60px rgba(255,255,255,.02),
+
+    inset 0 0 120px rgba(183,255,122,.03);
+
+}
+
+#startMission{
+
+    opacity:0;
+
+    transition:2s;
+
+}
+
+.lore p{
+
+    opacity:0;
+
+    transform:translateY(8px);
+
+    animation:appear 2s forwards;
+
+}
+
+@keyframes appear{
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

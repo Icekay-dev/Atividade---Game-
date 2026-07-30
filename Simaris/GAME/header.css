@@ -1,0 +1,73 @@
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    width: 100%;
+    padding: 25px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid rgba(0, 255, 170, 0.15);
+
+    background: linear-gradient(180deg,
+            rgba(0, 255, 170, 0.06),
+            transparent);
+
+    position: relative;
+}
+
+.logo {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+
+    color: #00FFAA;
+
+    text-shadow:
+        0 0 8px rgba(0, 255, 170, .7),
+        0 0 20px rgba(0, 255, 170, .3);
+
+    cursor: default;
+}
+
+.subtitle {
+    margin-top: 8px;
+
+    font-size: .85rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+
+    color: rgba(255, 255, 255, .65);
+}
+
+.header::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -1px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 220px;
+    height: 2px;
+
+    background: #00FFAA;
+
+    box-shadow:
+        0 0 8px #00FFAA,
+        0 0 20px #00FFAA;
+}
+
+.logo:hover {
+    text-shadow:
+        0 0 10px #00FFAA,
+        0 0 25px #00FFAA,
+        0 0 45px #00FFAA;
+}
